@@ -1,0 +1,57 @@
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+@mixin absoluteCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+// MEDIA QUERY
+/*
+0 - 600px PHONE
+600 - 900 TABLET PORTRAIT
+900-1200 TABLET LANDSCAPE
+1200 - 1800 DESKTOP (default)
+1800+ BIG DESKTOP
+
+breakpoint choice:
+- phone
+- tab-port
+-tab-land
+-big-desk
+
+ORDER: Base + typography > general layout + grid > page layout > component
+
+1em = 16px; media query relative units always use browser default font-size
+*/
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {
+			// 600px
+			@content;
+		}
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) {
+			// 900px
+			@content;
+		}
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {
+      // 1200px
+			@content;
+		}
+	}
+	@if $breakpoint == big-desk {
+		@media (min-width: 112.5em) {
+      // 1800px
+			@content;
+		}
+	}
+}
