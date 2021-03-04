@@ -16,12 +16,15 @@ class App extends Component {
       //     exact
       //     path="/"
       //     render={() => {
-      <div className="App">
+      <>
         <Navbar />
-        <Description />
-        <ZenTitle />
-        <Zen />
-      </div>
+        <div className="App">
+          <div></div>
+          <Description />
+          <ZenTitle />
+          <Zen />
+        </div>
+      </>
       //   }}
       // />
     );

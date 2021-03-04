@@ -9,6 +9,7 @@ import SVG from 'react-inlinesvg';
 
 import github from '../../assets/imgs/github.svg';
 import twitter from '../../assets/imgs/twitter.svg';
+import linkedin from '../../assets/imgs/linkedin.svg';
 import avatar from '../../assets/imgs/avatar.jpg';
 
 import './Navbar.css';
@@ -28,6 +29,12 @@ class Navbar extends Component {
         icon: <SVG src={twitter} className="icon icon--twitter" />,
         href: 'https://twitter.com/jianyuan94',
       },
+      {
+        name: 'linkedin',
+        style: {},
+        icon: <SVG src={linkedin} className="icon icon--twitter" />,
+        href: 'https://www.linkedin.com/in/jianyuan-chen',
+      },
       // {
       //     name: 'avatar',
       //     style: {
@@ -42,18 +49,16 @@ class Navbar extends Component {
     const icons = this.state.icons.map((icon, index) => {
       return (
         <Link className={`link ${icon.name}`} href={icon.href} key={index}>
-          {/* <Icon
-                        className={`icon`}
-                        name={icon.name}
-                        path={icon.link}
-                        style={icon.style}
-                    /> */}
           {icon.icon}
         </Link>
       );
     });
 
-    return <div className="nav">{icons}</div>;
+    return (
+      <div className="nav">
+        <div className="navInnerWrapper">{icons}</div>
+      </div>
+    );
   }
 }
 

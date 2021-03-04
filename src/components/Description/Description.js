@@ -12,7 +12,7 @@ const Description = (props) => {
       </p>
 
       <p className="info">
-        Software Engineer{' '}
+        iOS Software Engineer{' '}
         <span role="img" aria-label="developer">
           💻
         </span>{' '}
