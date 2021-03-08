@@ -7,6 +7,7 @@
 }
 
 .navInnerWrapper {
+  margin: auto; /* centers navbar */
   display: flex;
   flex: 1;
   justify-content: flex-end;
@@ -28,4 +29,18 @@
 
 .icon--twitter svg {
   fill: #1da1f2;
+}
+
+@media only screen and (max-width: 65.625em) {
+  .navInnerWrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .navInnerWrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }

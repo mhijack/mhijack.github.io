@@ -60,9 +60,18 @@ p {
   color: #f44;
 }
 
+@media only screen and (max-width: 65.625em) {
+  .description {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
   .description {
     width: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .title {
